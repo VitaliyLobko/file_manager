@@ -145,7 +145,7 @@ def del_empty_folder(path: Path) -> None:
             if not bool(sorted(el.rglob('*'))):
                 el.rmdir()
             else:
-                read_folder(el)
+                del_empty_folder(el)
 
 
 def main():
